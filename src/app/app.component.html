@@ -17,17 +17,17 @@
 </label>
 <div
   class="feedback"
-  *ngIf="password.errors && password.errors.minStrength">
+  *ngIf="password.errors && password.errors.zxcvbn">
   <div
     class="warning"
-    *ngIf="password.errors.minStrength.warning">
+    *ngIf="password.errors.zxcvbn.warning">
     <h3>Warning</h3>
-    <p>{{ password.errors.minStrength.warning }}</p>
+    <p>{{ password.errors.zxcvbn.warning }}</p>
   </div>
   <div
     class="suggestions"
-    *ngIf="password.errors.minStrength.suggestions">
+    *ngIf="password.errors.zxcvbn.suggestions">
     <h3>Suggestions</h3>
-    <p *ngFor="let suggestion of password.errors.minStrength.suggestions">{{ suggestion }}</p>
+    <p *ngFor="let suggestion of password.errors.zxcvbn.suggestions">{{ suggestion }}</p>
   </div>
 </div>
