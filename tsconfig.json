@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@mralexandernickel/angular-zxcvbn": [
+        "dist/angular-zxcvbn"
+      ],
+      "@mralexandernickel/angular-zxcvbn/*": [
+        "dist/angular-zxcvbn/*"
+      ]
+    }
   }
 }
