@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "pretest": "ng build angular-zxcvbn && ng build --base-href=/angular-zxcvbn/",
-    "test": "ng test --project angular-zxcvbn --watch=false",
+    "test": "ng test --project angular-zxcvbn --watch=false --code-coverage",
+    "posttest": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -37,6 +38,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
+    "coveralls": "^3.0.2",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~1.7.1",

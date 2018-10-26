@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/mralexandernickel/angular-zxcvbn.svg?branch=master)](https://travis-ci.org/mralexandernickel/angular-zxcvbn)
+[![Coverage Status](https://coveralls.io/repos/github/mralexandernickel/angular-zxcvbn/badge.svg?branch=master)](https://coveralls.io/github/mralexandernickel/angular-zxcvbn?branch=master)
 [![npm version](https://badge.fury.io/js/%40mralexandernickel%2Fangular-zxcvbn.svg)](https://www.npmjs.com/@mralexandernickel/angular-zxcvbn)
 
 Angular ZXCVBN
