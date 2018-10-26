@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mralexandernickel/angular-zxcvbn.svg?branch=master)](https://travis-ci.org/mralexandernickel/angular-zxcvbn)
+
 Angular ZXCVBN
 ==============
 
