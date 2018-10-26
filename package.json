@@ -5,7 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng build angular-zxcvbn && ng test --project angular-zxcvbn",
+    "pretest": "ng build angular-zxcvbn",
+    "test": "ng test --project angular-zxcvbn --watch=false",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
