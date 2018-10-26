@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/mralexandernickel/angular-zxcvbn.svg?branch=master)](https://travis-ci.org/mralexandernickel/angular-zxcvbn)
+[![npm version](https://badge.fury.io/js/%40mralexandernickel%2Fangular-zxcvbn.svg)](https://www.npmjs.com/@mralexandernickel/angular-zxcvbn)
 
 Angular ZXCVBN
 ==============
