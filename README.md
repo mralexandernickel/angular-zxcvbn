@@ -7,6 +7,10 @@ Angular ZXCVBN
 This module is a simple wrapper in form of an angular validator-function around
 dropbox' [zxcvbn](https://github.com/dropbox/zxcvbn).
 
+## Demo
+
+[Demo Application](https://mralexandernickel.github.io/angular-zxcvbn/)
+
 ## How to use
 
 Install this module by adding it as a dependency via yarn, npm or ng:
