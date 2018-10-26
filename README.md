@@ -1,27 +1,48 @@
-# AngularZxcvbn
+Angular ZXCVBN
+==============
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.3.
+This module is a simple wrapper in form of an angular validator-function around
+dropbox' [zxcvbn](https://github.com/dropbox/zxcvbn).
 
-## Development server
+## How to use
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Install this module by adding it as a dependency via yarn, npm or ng:
 
-## Code scaffolding
+    yarn add @mralexandernickel/angular-zxcvbn
+    npm install @mralexandernickel/angular-zxcvbn
+    ng add @mralexandernickel/angular-zxcvbn
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Afterwards you can use it in your angular components like this:
+    
+    import { zxcvbnValidator } from '@mralexandernickel/angular-zxcvbn';
 
-## Build
+    @Component({
+      // your regular component definition
+    })
+    export class SomeComponent {
+      public password: FormControl = new FormControl(this.password, [
+        zxcvbnValidator(2)
+      ]);
+    }
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+To show some feedback to you user, you can get the desired information like
+from every other angular-validator, for example:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    <div
+      class="feedback"
+      *ngIf="password.errors && password.errors.zxcvbn">
+      <div
+        class="warning"
+        *ngIf="password.errors.zxcvbn.warning">
+        <h3>Warning</h3>
+        <p>{{ password.errors.zxcvbn.warning }}</p>
+      </div>
+      <div
+        class="suggestions"
+        *ngIf="password.errors.zxcvbn.suggestions">
+        <h3>Suggestions</h3>
+        <p *ngFor="let suggestion of password.errors.zxcvbn.suggestions">
+          {{ suggestion }}
+        </p>
+      </div>
+    </div>
